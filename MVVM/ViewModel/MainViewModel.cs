@@ -7,9 +7,11 @@ namespace ohb.MVVM.ViewModel
     {
     	
     	public RelayCommand HomeViewCommand { get; set; }
+    	public RelayCommand DViewCommand { get; set; }
 
 
     	public HomeViewModel HomeVM { get; set; }
+    	public DViewModel DVM { get; set; }
 
               
         private object _currentView;
@@ -28,7 +30,7 @@ namespace ohb.MVVM.ViewModel
         public MainViewModel()
         {
             HomeVM = new HomeViewModel();
-
+            DVM = new DViewModel();
             
             CurrentView = HomeVM;
             
@@ -36,6 +38,11 @@ namespace ohb.MVVM.ViewModel
             HomeViewCommand = new RelayCommand(o =>
             {
                 CurrentView = HomeVM;
+            });
+
+            DViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = DVM;
             });
             
         }
