@@ -1,4 +1,4 @@
-﻿<Window x:Class="ohb.MainWindow"
+<Window x:Class="ohb.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -14,12 +14,11 @@
 	AllowsTransparency="True"
 	MouseMove="WindowMouseMoving">
 
+
 <Window.DataContext>
         <viewModel:MainViewModel/>
 </Window.DataContext>
-
-    
-        
+          
 	<Border Background="#2f4f4f"
 		CornerRadius="30">
 		<Grid>
@@ -56,7 +55,7 @@
 				Foreground="White"
 				FontSize="14"
 				Style="{StaticResource MenuButtonTheme}"
-				Command="{Binding DiscoveryViewCommand}"/>
+				Command="{Binding DViewCommand}"/>
 
 			<RadioButton Content="Settings"
 				Height="50"
@@ -85,8 +84,6 @@
 					Grid.Column="1"
 					Margin="10"
 					Content="{Binding CurrentView}"/>
-
-
 
 		</Grid>
 	</Border>
